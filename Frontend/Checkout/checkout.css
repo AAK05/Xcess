@@ -1,0 +1,88 @@
+
+body {
+    font-family: 'Raleway';
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #FFB700;
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+    color: #ffffff;
+}
+
+.navbar-nav {
+    margin-top: 8px;
+}
+
+.nav-item {
+    margin-right: 15px;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    border-radius: 10px; /* Adjust the value to change the curvature */
+    padding: 10px;
+    background-color:#4c4488;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.table th, .table td {
+    text-align: center;
+}
+
+.table th {
+    background-color: #4c4488;
+    color: #fff;
+}
+
+.table tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+.table tfoot {
+    background-color: #e9ecef;
+}
+
+.totalPrice {
+    font-weight: bold;
+    color: #28a745;
+}
+
+button {
+    background-color: #4c4488;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.payment-logo {
+    max-width: 50px;
+    margin-right: 10px;
+}
