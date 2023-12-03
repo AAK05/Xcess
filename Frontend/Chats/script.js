@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const restaurants = ["KFC", "Hokben", "Carrefour"];
+  const restaurants = ["KFC", "Hokben", "Papa Johns"];
   const restaurantList = document.getElementById("restaurant-list");
 
   // Populate restaurant list
