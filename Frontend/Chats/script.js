@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const restaurants = ["KFC", "Hokben", "Papa Johns"];
   const restaurantList = document.getElementById("restaurant-list");
 
-  // Populate restaurant list
   restaurants.forEach((restaurant, index) => {
     const div = document.createElement("div");
     div.textContent = restaurant;
@@ -25,8 +24,8 @@ function sendMessage() {
     const chatWindow = document.getElementById("chat-window");
     const messageDiv = document.createElement("div");
     messageDiv.textContent = message;
-    chatWindow.appendChild(messageDiv); // Appends new div for each message
-    chatWindow.scrollTop = chatWindow.scrollHeight; // Auto-scrolls to the bottom
+    chatWindow.appendChild(messageDiv);
+    chatWindow.scrollTop = chatWindow.scrollHeight;
     input.value = "";
   }
 }
