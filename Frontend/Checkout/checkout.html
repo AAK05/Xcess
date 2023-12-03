@@ -80,8 +80,8 @@
   <script>
     // Simulated orders data with corresponding logos
     const orders = [
-        { logo: 'papajohn.svg', item: 'Pizza', quantity: 2,  price: 23.49 },
-        { logo: 'papajohn.svg', item: 'Burger', quantity: 1, price: 13.99 },
+        { logo: 'chicken.png', item: 'Chicken Bucket', quantity: 2,  price: 13.15 },
+        { logo: 'popcorn.png', item: 'Popcorn Chicken', quantity: 1, price: 7.15 },
         // Add more orders as needed
     ];
 
@@ -97,7 +97,7 @@
         let totalPrice = 0;
         orders.forEach(order => {
             const row = `<tr>
-                            <td><img src="${order.logo}" alt="${order.item} Logo" style="max-width: 50px;"></td>
+                            <td><img src="${order.logo}" alt="${order.item} Logo" style="max-width: 100px;"></td>
                             <td>${order.item}</td>
                             <td>${order.quantity}</td>
                             <td>$${order.price.toFixed(2)}</td>
