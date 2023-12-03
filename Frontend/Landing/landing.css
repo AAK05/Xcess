@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  background-color: #ffb700
 }
 header {
   background-color: #ff7f50; /* Orange highlight */
@@ -16,19 +17,12 @@ header {
 }
 .landing {
   font-family: "Raleway", sans-serif;
-  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-height: 89vh;
-}
-.yellowbubble {
-  padding: 40px;
-  border-radius: 30px;
-  background-color: #ffb700;
 }
 .restaurant-option {
   display: inline-block;
