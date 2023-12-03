@@ -33,21 +33,66 @@
       
       <div class="row">
         <!-- Item Card -->
-        <div class="container mt-5">
+        <div class="container mt-5 col-4">
           <div class="card" style="width: 18rem;">
-              <img src="biscuits-logo.jpg" class="card-img-top" alt="Biscuits Logo" style="max-width: 100%;">
+              <img src="chicken.png" class="card-img-top" alt="Chicken Logo">
               <div class="card-body">
-                  <h5 class="card-title">Biscuits</h5>
-                  <p class="card-text">$3.15 - <span class="quantity">10</span> items</p>
-                  <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'decrease')">-</button>
-                  <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'increase')">+</button>
+                  <h5 class="card-title">Chicken Bucket</h5>
+                  <p class="card-text d-inline">$13.15 - </p>
+                  <p class="quantity1 d-inline">1</p>
+                  <p class="d-inline"> items</p>
+                  <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'decrease',13.15,1)">-</button>
+                  <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'increase',13.15,1)">+</button>
               </div>
           </div>
+        </div>
+          <div class="container mt-5 col-4">
+            <div class="card" style="width: 18rem;">
+                <img src="chicken.png" class="card-img-top" alt="Chicken Logo" style="max-width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken Bucket</h5>
+                    <p class="card-text d-inline">$12.15 - </p>
+                    <p class="quantity2 d-inline">1</p>
+                    <p class="d-inline"> items</p>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'decrease',12.15,2)">-</button>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'increase',12.15,2)">+</button>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+        <!-- Item Card -->
+        <div class="container mt-5 col-4">
+          <div class="card" style="width: 18rem;">
+              <img src="chicken.png" class="card-img-top" alt="Chicken Logo" style="max-width: 100%;">
+              <div class="card-body">
+                  <h5 class="card-title">Chicken Bucket</h5>
+                  <p class="card-text d-inline">$10.15 - </p>
+                  <p class="quantity3 d-inline">0</p>
+                  <p class="d-inline"> items</p>
+                  <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'decrease',10.15,3)">-</button>
+                  <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'increase',10.15,3)">+</button>
+              </div>
+          </div>
+        </div>
+          <div class="container mt-5 col-4">
+            <div class="card" style="width: 18rem;">
+                <img src="chicken.png" class="card-img-top" alt="Chicken Logo" style="max-width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken Bucket</h5>
+                    <p class="card-text d-inline">$<span class="price4">7.15</span> - </p>
+                    <p class="quantity4 d-inline">0</p>
+                    <p class="d-inline"> items</p>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'decrease',7.15,4)">-</button>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'increase',7.15,4)">+</button>
+                </div>
+            </div>
+          </div>  
       </div>
       
       <div class="row">
         <div class="col-12">
-          <h3 class="text-right">Total: $12.75</h3>
+          <h3 class="text-right">Total: $<span class="total">25.30</span></h3>
           <button class="btn btn-primary float-right">Checkout</button>
         </div>
       </div>
@@ -57,27 +102,35 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-      function changeQuantity(button, action) {
-          var quantityElement = document.querySelector('.quantity');
+      function changeQuantity(button, action, priceOption, qNum) {
+        var quantityElement = document.querySelector('.quantity' + qNum);
+        var currentQuantity = parseInt(quantityElement.textContent);
+        var pricePerItem = priceOption; // Example price, replace with your actual price
+
+        updatePrice(currentQuantity, pricePerItem, action, currentQuantity)
+        if (action === 'increase') {
+            currentQuantity++;
+        } else if (action === 'decrease' && currentQuantity > 0) {
+            currentQuantity--;
+        }
+
+        quantityElement.textContent = currentQuantity;
+        ;
+    }
+
+    function updatePrice(quantity, pricePerItem, action, currentQuantity) {
+        var changedPrice = pricePerItem;
+        var priceElement = document.querySelector('.card-text');
+        var totalPriceElement = document.querySelector('.total');
+        if (action === 'increase'){
+          var totalPrice = parseFloat(totalPriceElement.textContent) + changedPrice;
           
-          var currentQuantity = parseInt(quantityElement.textContent);
-          var pricePerItem = 3.15; // Example price, replace with your actual price
-  
-          if (action === 'increase') {
-              currentQuantity++;
-          } else if (action === 'decrease' && currentQuantity > 0) {
-              currentQuantity--;
-          }
-  
-          quantityElement.textContent = currentQuantity;
-          updatePrice(currentQuantity, pricePerItem);
-      }
-  
-      function updatePrice(quantity, pricePerItem) {
-          var totalPrice = quantity * pricePerItem;
-          var priceElement = document.querySelector('.card-text');
-          priceElement.textContent = `$${pricePerItem.toFixed(2)} - ${quantity} items`;
-      }
+          totalPriceElement.textContent = `${totalPrice.toFixed(2)}`
+        }else if (action === 'decrease' && currentQuantity > 0){
+          var totalPrice = parseFloat(totalPriceElement.textContent) - changedPrice;
+          totalPriceElement.textContent = `${totalPrice.toFixed(2)}`
+        };
+    }
   </script> 
   </body>
   </html>

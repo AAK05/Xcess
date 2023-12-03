@@ -41,3 +41,37 @@ body {
     max-width: 800px;
     margin: 0 auto;
 }
+
+
+.card {
+    width: 18rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #4c4488;
+}
+
+.btn-outline-secondary {
+    color: #007bff;
+}
+
+.btn-outline-secondary:hover {
+    color: #ffffff;
+    background-color: #007bff;
+}
