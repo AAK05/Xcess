@@ -35,10 +35,11 @@ header {
   color: #333;
   transition: transform 0.3s;
   width: 23vw;
-  margin-top: 0;
+  margin-top: -1vh;
   margin-bottom: -1vh;
   margin-left: 3vw;
-  margin-right: 3vw
+  margin-right: 3vw;
+  text-decoration:none;
 }
 .restaurant-option:hover {
   transform: scale(1.05);
