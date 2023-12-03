@@ -19,7 +19,6 @@
         <a class="nav-item nav-link" href="../Home/home.html">Home <span class="sr-only"></span></a>
         <a class="nav-item nav-link" href="../Landing/landing.html">Landing</a>
         <a class="nav-item nav-link" href="../Chats/chats.html">Chats</a>
-        <a class="nav-item nav-link" href="../Cart/cart.html">Cart</a>
         <a class="nav-item nav-link" href="../Checkout/checkout.html">Checkout</a>
     </nav>
   
@@ -31,9 +30,10 @@
       
       <div class="row">
         <!-- Item Card -->
+        <div class="col-1"></div>
         <div class="container mt-5 col-2">
           <div class="card" style="width: 18rem;">
-              <img src="chicken.png" class="card-img-top" alt="Chicken Logo">
+              <img src="chicken.png" class="mx-auto card-img-top" alt="Chicken Logo">
               <div class="card-body">
                   <h5 class="card-title">Chicken Bucket</h5>
                   <p class="card-text d-inline">$13.15 - </p>
@@ -46,21 +46,21 @@
         </div>
           <div class="container mt-5 col-2">
             <div class="card" style="width: 18rem;">
-                <img src="popcorn.png" class="card-img-top" alt="Chicken Logo">
+                <img src="popcorn.png" class="mx-auto card-img-top" alt="Chicken Logo">
                 <div class="card-body">
                     <h5 class="card-title">Popcorn Chicken</h5>
                     <p class="card-text d-inline">$7.15 - </p>
                     <p class="quantity2 d-inline">1</p>
                     <p class="d-inline"> items</p>
-                    <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'decrease',12.15,2)">-</button>
-                    <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'increase',12.15,2)">+</button>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'decrease',7.15,2)">-</button>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'increase',7.15,2)">+</button>
                 </div>
             </div>
           </div>
         <!-- Item Card -->
         <div class="container mt-5 col-2">
           <div class="card" style="width: 18rem;">
-              <img src="nuggets.png" class="card-img-top" alt="Chicken Logo">
+              <img src="nuggets.png" class="mx-auto card-img-top" alt="Chicken Logo">
               <div class="card-body">
                   <h5 class="card-title">Chicken Nugget</h5>
                   <p class="card-text d-inline">$10.15 - </p>
@@ -73,25 +73,29 @@
         </div>
           <div class="container mt-5 col-2">
             <div class="card" style="width: 18rem;">
-                <img src="coffee.jpeg" class="card-img-top" alt="Chicken Logo" >
+                <img src="coffee.jpeg" class="mx-auto card-img-top" alt="Chicken Logo" >
                 <div class="card-body">
                     <h5 class="card-title">American Coffee</h5>
                     <p class="card-text d-inline">$<span class="price4">2.15</span> - </p>
                     <p class="quantity4 d-inline">0</p>
                     <p class="d-inline"> items</p>
-                    <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'decrease',7.15,4)">-</button>
-                    <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'increase',7.15,4)">+</button>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'decrease',2.15,4)">-</button>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="changeQuantity(this, 'increase',2.15,4)">+</button>
                 </div>
             </div>
           </div>  
+          <div class="col-1"></div>
       </div>
+      
       </div>
+      
       <div class="row">
         <div class="col-11">
           <h3 class="text-right">Total: $<span class="total">20.30</span></h3>
           <button class="btn btn-primary float-right" style="background-color:#4c4488"><a style="color:white" href="../Checkout/checkout.html">Checkout</a></button>
         </div>
       </div>
+    
     </div>
 
   
